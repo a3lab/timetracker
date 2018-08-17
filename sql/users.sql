@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Aug 17, 2018 at 06:14 PM
+-- Generation Time: Aug 17, 2018 at 08:29 PM
 -- Server version: 5.6.34-log
 -- PHP Version: 7.1.7
 
@@ -34,18 +34,9 @@ CREATE TABLE `users` (
   `createdAccount` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `clockedIn` tinyint(1) NOT NULL DEFAULT '0',
   `userID` int(11) NOT NULL,
-  `badgeID` varchar(12) COLLATE utf8_unicode_ci DEFAULT NULL
+  `badgeID` varchar(12) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `totalShifts` int(20) DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`name`, `privileges`, `createdAccount`, `clockedIn`, `userID`, `badgeID`) VALUES
-('matthew hoopla', 0, '2018-08-04 23:33:19', 0, 6, NULL),
-('matthew Loewen 3', 3, '2018-08-17 14:10:24', 0, 7, NULL),
-('matthew Loewen 3', 3, '2018-08-17 14:11:59', 0, 8, '2343224'),
-('matthew Loewen 3', 3, '2018-08-17 14:12:20', 0, 9, '123123123123');
 
 --
 -- Indexes for dumped tables
@@ -65,7 +56,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;COMMIT;
+  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
