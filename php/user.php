@@ -65,7 +65,7 @@ class User
     }
 
 
-    function newUser($name, $privledges = 0, $badgeID = null)
+    function newUser($name, $badgeID = null, $privledges = 0)
     {
         $query = "INSERT INTO " . $this->tableName . " (name,privileges,badgeID)VALUES(:name,:privledges,:badgeID)";
         $stmt = $this->conn->prepare($query);
@@ -122,6 +122,12 @@ class User
                 )
             );
         }
+    }
+
+    function setClock()
+    {
+        //check if the user is clocked in
+
     }
 
     public function deleteUser()
