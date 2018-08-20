@@ -89,6 +89,7 @@ while continue_reading:
             req = requests.get(baseUrl+"command=newUser&userName="+name+"&badgeID="+finalUid)
             req = req.json()
             print(req["message"])
+            lcd.message(req["message"])
     
             
 ##                r = requests.get("http://mloewen.com/projects/timetracker/api.php?command=newUser&userName=theguy&badgeID=123123123123")
