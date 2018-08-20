@@ -7,7 +7,7 @@ function validateBadge($data)
     $int = preg_replace('/\D/', '', $data);
     $int = makeInputSafe($int);
 
-    if (strlen((string)$int) == 12) {
+    if (strlen((string)$int) == 15) {
         //we have 12 ints here
         if ($int == $data) {
             return true;
