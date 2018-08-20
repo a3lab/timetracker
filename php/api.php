@@ -34,8 +34,6 @@ if (isset($_GET['command']) && !empty($_GET['command'])) {
         if (isset($_GET['badgeID']) && !empty($_GET['badgeID'])) {
 
             //now we need to clock in that user
-
-
             echo json_encode(
                 array(
                     "query" => "running",

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Aug 17, 2018 at 08:29 PM
--- Server version: 5.6.34-log
--- PHP Version: 7.1.7
+-- Generation Time: Aug 19, 2018 at 08:50 PM
+-- Server version: 5.6.39-83.1
+-- PHP Version: 5.6.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -34,7 +34,7 @@ CREATE TABLE `users` (
   `createdAccount` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `clockedIn` tinyint(1) NOT NULL DEFAULT '0',
   `userID` int(11) NOT NULL,
-  `badgeID` varchar(12) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `badgeID` varchar(15) COLLATE utf8_unicode_ci DEFAULT NULL,
   `totalShifts` int(20) DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -56,7 +56,8 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;COMMIT;
+  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
